@@ -1,8 +1,6 @@
 import { News } from "../App";
 import NewsComponent from "./NewsComponent";
 const Home = ({ newsData }: any) => {
-  console.log(newsData);
-
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Get the News at your finger tips</h1>
@@ -10,6 +8,8 @@ const Home = ({ newsData }: any) => {
         {newsData.map(
           (
             news: {
+              source: string;
+              publishedAt: string;
               urlToImage: string;
               content: string;
               description: string;
@@ -27,6 +27,8 @@ const Home = ({ newsData }: any) => {
               urlToImage={news.urlToImage}
               content={news.content}
               name={news.name}
+              publishedAt={news.publishedAt}
+              source={news.source}
             />
           )
         )}

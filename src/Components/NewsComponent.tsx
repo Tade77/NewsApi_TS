@@ -8,12 +8,15 @@ const NewsComponent = ({
   urlToImage,
   content,
   description,
+  publishedAt,
   name,
+  source,
 }: News) => {
   return (
     <div className="news">
       <h1>{title}</h1>
       <h4>{author}</h4>
+      <p>{publishedAt}</p>
       <img
         src={
           urlToImage
@@ -29,7 +32,7 @@ const NewsComponent = ({
       />
       <p className="content">{content}</p>
       <p className="content">{description}</p>
-      <Link to={`/newsDetails/${name}`}>
+      <Link to={`/newsDetails/${source}`}>
         <p className="read--btn">Read More</p>
       </Link>
     </div>

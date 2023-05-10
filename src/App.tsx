@@ -12,7 +12,9 @@ export interface News {
   description: string;
   urlToImage: string;
   content: string;
+  publishedAt: string;
   name: string;
+  source: string;
 }
 const App = () => {
   const [newsData, setNewsData] = useState<News[]>([]);
@@ -31,6 +33,7 @@ const App = () => {
   }, []);
   return (
     <div className="App">
+      <img className="logo" src="/newsLogo.jpg" alt="" />
       <Routes>
         <Route path="/" element={<Home newsData={newsData} />} />
         <Route
@@ -46,7 +49,9 @@ const App = () => {
               description={"description"}
               urlToImage={"urlToImage"}
               content={"content"}
-              index={undefined}
+              name={"name"}
+              publishedAt={"publishedAt"}
+              source={"source"}
             />
           }
         />

@@ -4,13 +4,12 @@ import { useParams } from "react-router-dom";
 const NewsPage = ({ newsData }: any) => {
   const [url, setUrl] = useState("");
   const { newsDetails } = useParams();
-  // console.log(useParams());
   useEffect(() => {
     const newsUrl = newsData.find(
-      (news: { name: string }) => news.name === newsDetails
+      (news: { source: string }) => news.source === newsDetails
     );
     setUrl(newsUrl.url);
-  }, []);
+  }, [newsData, newsDetails]);
 
   return <div>{url}</div>;
 };
