@@ -1,0 +1,27 @@
+.news {
+  width: 300px;
+  height: auto;
+  background-color: silver;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.news--card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.read--btn {
+  text-align: center;
+  font-size: 28px;
+  border: 2px solid green;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.content {
+  font-size: 18px;
+  text-align: justify;
+  overflow-x: auto;
+}
