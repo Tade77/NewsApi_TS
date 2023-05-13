@@ -8,9 +8,11 @@ const Home = ({ newsData }: any) => {
         {newsData.map(
           (
             news: {
+              id: string;
               source: string;
               publishedAt: string;
               urlToImage: string;
+              url: string;
               content: string;
               description: string;
               author: string;
@@ -20,15 +22,17 @@ const Home = ({ newsData }: any) => {
             name: any
           ) => (
             <NewsComponent
-              key={name}
+              key={news.name}
               title={news.title}
               author={news.author}
               description={news.description}
               urlToImage={news.urlToImage}
               content={news.content}
+              url={news.url}
               name={news.name}
               publishedAt={news.publishedAt}
               source={news.source}
+              id={news.id}
             />
           )
         )}

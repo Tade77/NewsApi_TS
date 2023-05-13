@@ -10,6 +10,8 @@ const NewsComponent = ({
   description,
   publishedAt,
   name,
+  url,
+  id,
   source,
 }: News) => {
   return (
@@ -32,9 +34,9 @@ const NewsComponent = ({
       />
       <p className="content">{content}</p>
       <p className="content">{description}</p>
-      <Link to={`/newsDetails/${source}`}>
+      <a href={url}>
         <p className="read--btn">Read More</p>
-      </Link>
+      </a>
     </div>
   );
 };

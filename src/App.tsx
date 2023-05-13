@@ -11,8 +11,10 @@ export interface News {
   author: string;
   description: string;
   urlToImage: string;
+  url: string;
   content: string;
   publishedAt: string;
+  id: string | undefined;
   name: string;
   source: string;
 }
@@ -36,10 +38,7 @@ const App = () => {
       <img className="logo" src="/newsLogo.jpg" alt="" />
       <Routes>
         <Route path="/" element={<Home newsData={newsData} />} />
-        <Route
-          path="/:newsDetails"
-          element={<NewsPage newsData={newsData} />}
-        />
+        <Route path="/:newsId" element={<NewsPage newsData={newsData} />} />
         <Route
           path="/news-component"
           element={
@@ -49,9 +48,11 @@ const App = () => {
               description={"description"}
               urlToImage={"urlToImage"}
               content={"content"}
+              url={"url"}
               name={"name"}
               publishedAt={"publishedAt"}
               source={"source"}
+              id={"id"}
             />
           }
         />

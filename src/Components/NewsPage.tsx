@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const NewsPage = ({ newsData }: any) => {
-  const [url, setUrl] = useState("");
-  const { newsDetails } = useParams();
+  const [source, setSource] = useState("");
+  const { newsId } = useParams();
   useEffect(() => {
     const newsUrl = newsData.find(
-      (news: { source: string }) => news.source === newsDetails
+      (news: { id: string | undefined }) => news.id === newsId
     );
-    setUrl(newsUrl.url);
-  }, [newsData, newsDetails]);
+    setSource(newsUrl.source);
+  }, []);
 
-  return <div>{url}</div>;
+  return <div>{Object.keys(source)}</div>;
 };
 
 export default NewsPage;
