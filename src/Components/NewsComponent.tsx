@@ -1,6 +1,5 @@
 import React from "react";
 import { News } from "../App";
-import { Link } from "react-router-dom";
 
 const NewsComponent = ({
   title,

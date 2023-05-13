@@ -3,7 +3,7 @@ import NewsComponent from "./NewsComponent";
 const Home = ({ newsData }: any) => {
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Get the News at your finger tips</h1>
+      <h1 className="header">Get the News at your finger tips</h1>
       <div className="news--card">
         {newsData.map(
           (

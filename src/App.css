@@ -4,6 +4,9 @@
   border-radius: 10px;
   margin: 20px;
 }
+.header {
+  text-align: center;
+}
 .news {
   width: 320px;
   height: auto;
@@ -13,6 +16,7 @@
   margin-bottom: 30px;
   margin-left: 40px;
 }
+
 .news--card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,6 +45,22 @@
   .news {
     background-color: antiquewhite;
   }
+  .news {
+    font-size: 14px;
+  }
+  .content {
+    font-size: 16px;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .header {
+    font-size: 32px;
+  }
+  .read--btn {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 480px) {
   .news--card {
@@ -48,9 +68,19 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .news {
-    background-color: rgba(15, 34, 241, 0.5);
+    background-color: rgba(15, 241, 241, 0.4);
+  }
+  .news {
+    font-size: 14px;
   }
   .content {
-    /* color: white; */
+    font-size: 16px;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .header {
+    font-size: 25px;
   }
 }
