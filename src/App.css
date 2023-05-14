@@ -37,6 +37,7 @@
   text-align: justify;
   overflow-x: auto;
 }
+/* Tabs responsiveness */
 @media screen and (max-width: 1260px) {
   .news--card {
     display: grid;
@@ -62,13 +63,15 @@
     font-size: 20px;
   }
 }
+/* small devices */
 @media screen and (max-width: 480px) {
   .news--card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
   .news {
-    background-color: rgba(15, 241, 241, 0.4);
+    background-color: white;
+    border: 1px solid gray;
   }
   .news {
     font-size: 14px;
