@@ -117,7 +117,9 @@
   border-radius: 50%;
   animation: rotate 0.79s infinite;
 }
-
+.loading {
+  color: white;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

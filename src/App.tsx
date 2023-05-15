@@ -22,6 +22,9 @@ export interface News {
 }
 const App = () => {
   const [newsData, setNewsData] = useState<News[]>([]);
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+
   // console.log(newsData);
 
   useEffect(() => {
@@ -31,9 +34,20 @@ const App = () => {
       )
       .then((res) => res.data)
       .then((data) => {
-        setNewsData(data.articles);
+        if (data) {
+          setLoading(false);
+          setNewsData(data.articles);
+        }
       })
-      .catch((err) => console.log(err));
+      .catch((error) => {
+        setHasError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    return () => {
+      setNewsData([]);
+    };
   }, []);
   return (
     <div className="App">
@@ -42,7 +56,16 @@ const App = () => {
       </Link>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/news-page" element={<NewsPage newsData={newsData} />} />
+        <Route
+          path="/news-page"
+          element={
+            <NewsPage
+              isLoading={isLoading}
+              hasError={hasError}
+              newsData={newsData}
+            />
+          }
+        />
         <Route
           path="/news-component"
           element={
