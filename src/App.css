@@ -1,3 +1,14 @@
+.home--page {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.btn {
+  background-color: white;
+  color: black;
+  padding: 15px 15px;
+  border-radius: 25px;
+}
 .logo {
   width: 100px;
   height: 100px;
@@ -6,11 +17,13 @@
 }
 .header {
   text-align: center;
+  color: white;
+  font-size: 52px;
 }
 .news {
   width: 320px;
   height: auto;
-  background-color: silver;
+  background-color: white;
   border-radius: 10px;
   padding: 10px 10px;
   margin-bottom: 30px;
@@ -85,5 +98,31 @@
   }
   .header {
     font-size: 25px;
+  }
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: block;
+  position: absolute;
+  margin: 0% auto;
+  height: 100px;
+  width: 100px;
+  border: 10px solid #dbcbcb;
+  border-right: 10px solid rgb(133, 133, 143);
+  border-radius: 50%;
+  animation: rotate 0.79s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

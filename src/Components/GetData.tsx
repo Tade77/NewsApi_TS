@@ -1,6 +1,6 @@
 import { News } from "../App";
 import NewsComponent from "./NewsComponent";
-const Home = ({ newsData }: any) => {
+const NewsPage = ({ newsData }: any) => {
   return (
     <div>
       <h1 className="header">Get the News at your finger tips</h1>
@@ -40,6 +40,6 @@ const Home = ({ newsData }: any) => {
     </div>
   );
 };
-export default Home;
+export default NewsPage;
 
 // d2fdb20c08d6416eaef68ca1b3b6ac3f;

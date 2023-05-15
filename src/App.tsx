@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Components/GetData";
-import NewsPage from "./Components/NewsPage";
 import axios from "axios";
 import NewsComponent from "./Components/NewsComponent";
+import Error from "./Components/Error";
+import NewsPage from "./Components/GetData";
+import HomePage from "./Components/Home";
 
 export interface News {
   title: string;
@@ -35,10 +37,12 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <img className="logo" src="/newsLogo.jpg" alt="" />
+      <Link to="/">
+        <img className="logo" src="/1Vz0dwTY_400x400.jpg" alt="" />
+      </Link>
       <Routes>
-        <Route path="/" element={<Home newsData={newsData} />} />
-        <Route path="/:newsId" element={<NewsPage newsData={newsData} />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/news-page" element={<NewsPage newsData={newsData} />} />
         <Route
           path="/news-component"
           element={
@@ -56,6 +60,7 @@ const App = () => {
             />
           }
         />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );

@@ -8,3 +8,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+body {
+  background-image: url("./assets/cbs-evening-news-3840x2160.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
