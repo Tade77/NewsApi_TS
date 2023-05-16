@@ -28,6 +28,7 @@
   padding: 10px 10px;
   margin-bottom: 30px;
   margin-left: 40px;
+  box-shadow: 25px 25px 25px rgba(2, 27, 15, 0.5);
 }
 
 .news--card {
@@ -110,8 +111,8 @@
   display: block;
   position: absolute;
   margin: 0% auto;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border: 10px solid #dbcbcb;
   border-right: 10px solid rgb(133, 133, 143);
   border-radius: 50%;
@@ -119,6 +120,7 @@
 }
 .loading {
   color: white;
+  font-size: 22px;
 }
 @keyframes rotate {
   0% {
