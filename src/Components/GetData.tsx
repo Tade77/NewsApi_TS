@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { News } from "../App";
 import NewsComponent from "./NewsComponent";
 import Loader from "./Loader";
 const NewsPage = ({ newsData, isLoading, hasError }: any) => {
-  // const [isLoading, setLoading] = useState(true);
   return (
     <div>
       <h1 className="header">Get the News at your finger tips</h1>
@@ -50,5 +47,3 @@ const NewsPage = ({ newsData, isLoading, hasError }: any) => {
   );
 };
 export default NewsPage;
-
-// d2fdb20c08d6416eaef68ca1b3b6ac3f;

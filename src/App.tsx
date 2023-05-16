@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
-import Home from "./Components/GetData";
 import axios from "axios";
 import NewsComponent from "./Components/NewsComponent";
-import Error from "./Components/Error";
 import NewsPage from "./Components/GetData";
 import HomePage from "./Components/Home";
 
@@ -24,8 +22,6 @@ const App = () => {
   const [newsData, setNewsData] = useState<News[]>([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setLoading] = useState(true);
-
-  // console.log(newsData);
 
   useEffect(() => {
     axios
