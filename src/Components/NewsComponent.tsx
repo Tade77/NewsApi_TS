@@ -1,4 +1,3 @@
-import React from "react";
 import { News } from "../App";
 
 const NewsComponent = ({
@@ -8,10 +7,7 @@ const NewsComponent = ({
   content,
   description,
   publishedAt,
-  name,
   url,
-  id,
-  source,
 }: News) => {
   return (
     <div className="news">
@@ -33,7 +29,7 @@ const NewsComponent = ({
       />
       <p className="content">{content}</p>
       <p className="content">{description}</p>
-      <a href={url}>
+      <a href={url} target="_blank">
         <p className="read--btn">Read More</p>
       </a>
     </div>

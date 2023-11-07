@@ -7,7 +7,9 @@ const NewsPage = ({ newsData, isLoading, hasError }: any) => {
       {isLoading ? (
         <Loader />
       ) : hasError ? (
-        <h1>Something went wrong</h1>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>
+          Something went wrong
+        </h1>
       ) : (
         <div className="news--card">
           {newsData.map(
@@ -27,7 +29,7 @@ const NewsPage = ({ newsData, isLoading, hasError }: any) => {
               name: any
             ) => (
               <NewsComponent
-                key={news.name}
+                key={news.id}
                 title={news.title}
                 author={news.author}
                 description={news.description}
