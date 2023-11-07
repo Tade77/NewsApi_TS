@@ -27,8 +27,12 @@ const NewsComponent = ({
         }}
         alt={urlToImage}
       />
-      <p className="content">{content}</p>
-      <p className="content">{description}</p>
+      <p className="content">
+        {content ? content : "Details coming later....."}
+      </p>
+      <p className="content">
+        {description ? description : "Details coming later....."}
+      </p>
       <a href={url} target="_blank">
         <p className="read--btn">Read More</p>
       </a>
